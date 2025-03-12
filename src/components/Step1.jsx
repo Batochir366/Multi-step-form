@@ -1,5 +1,7 @@
+"use client";
 import React from "react";
 import { TextField } from ".";
+import { Footer } from ".";
 export const Step1 = () => {
   return (
     <div className="flex flex-col gap-3">

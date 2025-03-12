@@ -1,5 +1,6 @@
 import React from "react";
 import { TextField } from ".";
+import { Footer } from ".";
 export const Step2 = () => {
   return (
     <div className="flex flex-col gap-3">
