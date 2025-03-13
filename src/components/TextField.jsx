@@ -6,6 +6,8 @@ export const TextField = ({
   HelperText,
   inputType,
   className,
+  handleOnChange,
+  name,
 }) => {
   return (
     <div className="w-fit h-fit bg-white gap-2 flex flex-col">
@@ -14,6 +16,8 @@ export const TextField = ({
         <h1 className="text-[#e14942] text-[14px] font-[600]">*</h1>
       </div>
       <input
+        onChange={handleOnChange}
+        name={name}
         type={inputType}
         className={
           `w-[392px]  ${

@@ -1,13 +1,34 @@
 import React from "react";
 import { TextField } from ".";
 import { Footer } from ".";
-export const Step2 = () => {
+export const Step2 = ({ handleOnChange }) => {
   return (
     <div className="flex flex-col gap-3">
-      <TextField TextField={"Email"} isCorrect={true} inputType={"email"} />
-      <TextField TextField={"Phone numbder"} inputType={"number"} />
-      <TextField TextField={"Password"} inputType={"password"} />
-      <TextField TextField={"Confirm password"} inputType={"password"} />
+      <TextField
+        handleOnChange={handleOnChange}
+        TextField={"Email"}
+        isCorrect={true}
+        inputType={"email"}
+        name={"Email"}
+      />
+      <TextField
+        handleOnChange={handleOnChange}
+        TextField={"Phone numbder"}
+        inputType={"number"}
+        name={"Phonenumber"}
+      />
+      <TextField
+        handleOnChange={handleOnChange}
+        TextField={"Password"}
+        inputType={"password"}
+        name={"Password"}
+      />
+      <TextField
+        handleOnChange={handleOnChange}
+        TextField={"Confirm password"}
+        inputType={"password"}
+        name={"Confirmpassword"}
+      />
     </div>
   );
 };

@@ -2,13 +2,15 @@
 import React from "react";
 import { TextField } from ".";
 import { Footer } from ".";
-export const Step3 = () => {
+export const Step3 = ({ handleOnChange }) => {
   return (
     <div className="flex flex-col gap-3">
       <TextField
+        handleOnChange={handleOnChange}
         isCorrect={true}
         TextField={"Date of birth"}
         inputType={"date"}
+        name={"Dateofbirth"}
       />
       <div className="w-fit h-fit bg-white gap-2 flex flex-col">
         <div className="flex">

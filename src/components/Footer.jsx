@@ -10,7 +10,7 @@ export const Footer = ({
   isHidden,
 }) => {
   return (
-    <div className={`w-[416px] ${isHidden ? "hidden" : "flex"} gap-2`}>
+    <div className={`w-[416px] ${stepCount === 4 ? "hidden" : "flex"} gap-2`}>
       {isBack ? (
         <button
           onClick={handleNextStep}
