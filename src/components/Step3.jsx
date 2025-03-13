@@ -2,12 +2,11 @@
 import React from "react";
 import { TextField } from ".";
 import { Footer } from ".";
-export const Step3 = ({ handleOnChange }) => {
+export const Step3 = ({ handleOnChange, isCorrect }) => {
   return (
     <div className="flex flex-col gap-3">
       <TextField
         handleOnChange={handleOnChange}
-        isCorrect={true}
         TextField={"Date of birth"}
         inputType={"date"}
         name={"Dateofbirth"}

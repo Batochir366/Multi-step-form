@@ -30,6 +30,22 @@ export default function Home() {
     console.log(inputValues);
   };
   //set input value end
+  const handleNextStep = () => {
+    validationCheck();
+    setCount(count + 1);
+  };
+
+  const handlePreviousStep = () => {
+    setCount(count - 1);
+  };
+  //Validation check function
+  const validationCheck = () => {
+    if (inputValues.Firstname.length < 8) {
+      <Steps isCorrect={false} />;
+    } else {
+      <Steps isCorrect={true} />;
+    }
+  };
   return (
     <div className="w-fit h-fit flex flex-col bg-white rounded-[8px] p-8 ">
       <div className="w-[416px] h-fit  bg-white">
@@ -39,20 +55,16 @@ export default function Home() {
           {count === 0 ? (
             <Footer
               isBack={true}
-              //set count
               stepCount={count + 1}
-              //change pages
-              handleNextStep={() => setCount(count + 1)}
-              handlePreviousStep={() => setCount(count - 1)}
+              handleNextStep={handleNextStep}
+              handlePreviousStep={handlePreviousStep}
             />
           ) : (
             <Footer
               isBack={false}
-              //set count
               stepCount={count + 1}
-              //change pages
-              handleNextStep={() => setCount(count + 1)}
-              handlePreviousStep={() => setCount(count - 1)}
+              handleNextStep={handleNextStep}
+              handlePreviousStep={handlePreviousStep}
             />
           )}
         </div>

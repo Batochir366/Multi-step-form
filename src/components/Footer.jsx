@@ -7,7 +7,6 @@ export const Footer = ({
   handleNextStep,
   handlePreviousStep,
   stepCount,
-  isHidden,
 }) => {
   return (
     <div className={`w-[416px] ${stepCount === 4 ? "hidden" : "flex"} gap-2`}>
